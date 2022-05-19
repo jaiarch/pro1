@@ -18,4 +18,16 @@
   <build>
     <finalName>simple-webapp</finalName>
   </build>
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>ip-172-31-90-182-releases</name>
+        <url>http://35.175.233.217:8081/artifactory/maven-repo</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>ip-172-31-90-182-snapshots</name>
+        <url>http://35.175.233.217:8081/artifactory/maven-repo</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
