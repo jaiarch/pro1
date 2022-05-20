@@ -22,12 +22,12 @@
     <repository>
         <id>central</id>
         <name>ip-172-31-90-182-releases</name>
-        <url>http://35.175.233.217:8081/artifactory/maven-repo</url>
+        <url>http://44.201.251.180:8081/artifactory/maven-repo</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
         <name>ip-172-31-90-182-snapshots</name>
-        <url>http://35.175.233.217:8081/artifactory/maven-repo</url>
+        <url>http://44.201.251.180:8081/artifactory/maven-repo</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
