@@ -1,5 +1,7 @@
 FROM openjdk:8
 MAINTAINER devops
 WORKDIR /tmp/
-COPY movies-1.0-SNAPSHOT.jar ./app.jar
-  
+COPY target/movies-1.0-SNAPSHOT.jar ./app.jar
+COPY application.properties ./application.properties
+EXPOSE 8090
+CMD ["java" "-jar", "app.jar"]  
