@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: new1
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: japp
+  template:
+    metadata:
+      labels:
+        app: japp
+    spec:
+      containers:
+      - name: japp
+        image: 837168460853.dkr.ecr.us-east-2.amazonaws.com/mayrepo:latest
+        ports:
+        - containerPort: 80
