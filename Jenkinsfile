@@ -17,7 +17,10 @@ node('node'){
     stage('Publish Artifacts'){
         
     }
-    stage('Deploy'){
-       deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://3.95.191.75:8080/')], contextPath: 'app1', war: '**/*.war'   
+    stage('Docker Build and Push'){
+       sh '''aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin 839354989419.dkr.ecr.us-east-1.amazonaws.com
+
+             sudo docker build -t 839354989419.dkr.ecr.us-east-1.amazonaws.com/jaimage:${BUILD_NUMBER} .
+             sudo docker push 839354989419.dkr.ecr.us-east-1.amazonaws.com/jaimage:${BUILD_NUMBER}'''
     }
 }
