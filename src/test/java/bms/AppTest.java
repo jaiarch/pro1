@@ -1,4 +1,4 @@
-package cricbuzz;
+package bms;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

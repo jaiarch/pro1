@@ -1,4 +1,4 @@
-package cricbuzz;
+package bms;
 
 /**
  * Hello world!
